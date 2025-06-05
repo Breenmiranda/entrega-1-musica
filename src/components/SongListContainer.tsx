@@ -17,7 +17,7 @@ const SongList = () => {
                     title={song.title}
                     artist={song.artist}
                     duration={song.duration}
-                    image={song.duration}
+                    image={song.image}
                 />
             ))}
         </div>

@@ -1,3 +1,5 @@
+import styles from "./SongCard.module.css"
+
 type Props = {
     title: string;
     artist: string;
@@ -7,16 +9,14 @@ type Props = {
 
 const SongCard = ({ title, artist, duration, image }: Props) => {
     return (
-        <div style={{border: "1px solid #ccc", padding: "10px", borderRadius: "8px"}}>
-            <img src={image} alt={title} style={{ width: "100%", borderRadius:"4px"}} />
-            <h3>{title}</h3>
-            <p>{artist}</p>
-            <p>{duration}</p>
-            <button style={{ padding: "5px 10px", background: "#282c34", color:"white", border: "none", borderRadius: "4px"}}>
-                ⏯ Play
-            </button>
+        <div className={styles.card}>
+            <img src={image} alt={title}
+            className={styles.image} />
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.artist}>{artist}</p>
+                <p className={styles.duration}>{duration}</p>
         </div>
     )
 }
 
-export default SongCard;
+export default SongCard

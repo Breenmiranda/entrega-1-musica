@@ -1,9 +1,19 @@
+import styles from "./Navbar.module.css"
+import logo from "../assets/Spotify_icon.svg"
+
 const Navbar = () => {
     return (
-        <nav style={{ backgroundColor: "#282c34", padding: "10px"}}>
-            <h1 style={{color:"white", margin:0}}>Mi Aplicación</h1>
+        <nav className={styles.navbar}>
+            <div className={styles.logo}>
+                <img src={logo} alt="Spotify Logo" />
+                <span>Spotify</span>
+            </div>
+            <div className={styles.search}>
+                <input type="text" placeholder="¿Qué querés reproducir?" />
+            </div>
+            <button className={styles.button}>Iniciar sesión</button>
         </nav>
-    );
-};
+    )
+}
 
 export default Navbar;

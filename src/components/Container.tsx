@@ -1,19 +1,11 @@
-type ContainerProps = {
+import styles from "./Container.module.css";
+
+type Props = {
     children: React.ReactNode;
 };
 
-const Container = ({children}: ContainerProps) => {
-    return (
-        <div 
-            style={{
-                maxWidth:"1200px",
-                margin:"0 auto",
-                padding:"20px"
-            }}
-        >
-            {children}
-        </div>
-    )
+export default function
+Container({children}: Props) {
+    return <div className={styles.container}>{children}
+    </div>
 }
-
-export default Container;

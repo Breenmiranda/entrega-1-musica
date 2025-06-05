@@ -1,5 +1,6 @@
 import SongCard from "./SongCard";
-import type { Song } from "../data/songs";
+import type { Song } from "../Types";
+import styles from "./SongSection.module.css"
 
 type Props = {
     title: string;
@@ -8,20 +9,14 @@ type Props = {
 
 const SongSection = ({ title, songs }: Props) => {
     return (
-        <section style={{ marginBottom: "40px"}}>
-            <h2 style={{ marginBottom: "16px"}}>{title}</h2>
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                    gap: "16px",
-                }}
-            >
+        <section className={styles.section}>
+            <h2 className={styles.title}>{title}</h2>
+            <div className={styles.grid}>
                 {songs.map((song) => (
                     <SongCard
                         key={song.id}
                         title={song.title}
-                        artist={song.title}
+                        artist={song.artist}
                         duration={song.duration}
                         image={song.image}
                     />

@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #000000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 4);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1db954;
+}
+
+.logo img {
+     width: 30px;
+     height: 30px;
+}
+
+.search {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.search input {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #282828;
+    color: white;
+    font-size: 14px;
+}
+
+.button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #1ed760;
+}
